@@ -1,0 +1,11 @@
+**1前提：Linux服务器下需装好Jmeter，请参考我另一篇博客：[1.centos安装jmeter教程.md](1.centos安装jmeter教程.md)**  
+
+**2在Linux压测如下所述：**  
+(1).在window上打开jmeter，新建线程组--HTTP请求--查看结果树--聚合报告，在HTTP请求的参数如图所示
+![](https://i.imgur.com/xOoUC8J.png)
+
+(2).在window下另存测试计划为Baidu.jmx,将Baidu.jmx复制粘贴在Linux中的/usr/jmeter/apache-jmeter-3.1/bin目录下  
+(3)在Linux中输入以下命令:
+```./jmeter.sh –n –t test.jmx –l test.jtl```,即可生成测试报告  
+(4)将生成的test.jtl复制在window下，在window下的jmeter中，添加聚合报告，在“浏览”中选择test.jtl,即可查看  
+(5)其聚合报告和查看结果树已有数据显示
